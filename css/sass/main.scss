@@ -1,0 +1,13 @@
+@import 'vendors/bootstrap/scss/bootstrap.scss';
+@import 'layout/header', 'layout/navigation', 'layout/main', 'layout/catalogo';
+@import 'base/typography';
+@import 'abstracts/variables';
+
+* {
+	box-sizing: content-box;
+	font-size: 100%;
+}
+body {
+	font-family: $ppal_font;
+	color: $ppal_fc;
+}

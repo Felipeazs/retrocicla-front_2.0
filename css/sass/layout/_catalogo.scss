@@ -1,0 +1,36 @@
+@import '../abstracts/variables';
+@import '../base/typography';
+
+.catalogo {
+	background-color: $secd_bc;
+	text-align: center;
+	padding: 2.5% 0;
+	font-weight: bold;
+	font-size: 22px;
+	a {
+		text-decoration: none;
+	}
+	p,
+	span {
+		font-family: $secd_font;
+		font-size: 2rem;
+		text-align: center;
+		color: $ppal_fc;
+	}
+	.galeria {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.index {
+			margin: 2% 1%;
+		}
+	}
+}
+@media (min-width: 600px) {
+	.catalogo {
+		.galeria {
+			flex-direction: row !important;
+			justify-content: center;
+		}
+	}
+}

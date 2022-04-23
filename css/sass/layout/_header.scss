@@ -1,0 +1,49 @@
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	height: 50px;
+	background-color: #ffff;
+	.email {
+		display: flex;
+		flex-direction: row;
+		p {
+			font-size: 15px;
+			font-weight: bold;
+		}
+	}
+	.upcycling {
+		display: none;
+	}
+}
+i {
+	font-size: 15px;
+}
+p {
+	margin: 0px;
+	height: auto;
+	font-weight: bold;
+}
+@media (min-width: 600px) {
+	.email {
+		p {
+			font-size: 18px;
+			font-weight: bold;
+		}
+	}
+	.upcycling {
+		display: inline-block !important;
+		p {
+			font-size: 25px;
+		}
+	}
+	i {
+		font-size: 22px;
+	}
+	p {
+		margin: 0px;
+		height: auto;
+		font-weight: bold;
+	}
+}

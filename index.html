@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--Bootstrap iconos-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+		<!--FontAwesome-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!--Flickity gallery-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+		<link rel="stylesheet" href="css/flickity.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Inicio</title>
+	</head>
+	<body>
+		<!-- Header -->
+
+		<header>
+			<div class="email">
+				<div><i class="bi bi-envelope"></i></div>
+				<p>retrocicla@gmail.com</p>
+			</div>
+			<div class="upcycling">
+				<p>Upcycling Chile</p>
+			</div>
+			<div class="icons">
+				<i class="bi bi-whatsapp pe-3"></i>
+				<i class="bi bi-instagram pe-3"></i>
+				<i class="bi bi-facebook"></i>
+			</div>
+		</header>
+
+		<nav>
+			<div>
+				<img src="img/logo-menu.png" alt="logo" />
+			</div>
+			<div class="navigator">
+				<ul>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="/">INICIO</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/somos">SOMOS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/tienda">TIENDA</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/donaciones">DONACIONES</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/blog">BLOG</a>
+					</li>
+				</ul>
+			</div>
+
+			<!--Usuario y Carrito-->
+
+			<div class="carrito">
+				<div class="bag">
+					<a href="/carrito"><i class="bi bi-bag"></i></a>
+					<div class="span text-center"></div>
+				</div>
+				<div class="person">
+					<a href="/login"><i class="bi bi-person-circle"></i></a>
+				</div>
+				<div class="logout">
+					<c:if test="${ not empty cliente }">
+						<a href="/logout">
+							<div class="salir">
+								<span>Salir</span>
+							</div>
+						</a>
+					</c:if>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Carousel inicial -->
+
+		<main class="main">
+			<section class="carousel">
+				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-indicators">
+						<button
+							type="button"
+							data-bs-target="#carouselExampleIndicators"
+							data-bs-slide-to="0"
+							class="active"
+							aria-current="true"
+							aria-label="Slide 1"
+						></button>
+						<button
+							type="button"
+							data-bs-target="#carouselExampleIndicators"
+							data-bs-slide-to="1"
+							aria-label="Slide 2"
+						></button>
+						<button
+							type="button"
+							data-bs-target="#carouselExampleIndicators"
+							data-bs-slide-to="2"
+							aria-label="Slide 3"
+						></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="img/index-1.png" class="d-block w-100" alt="imagen-carousel-1" />
+							<div class="texto">
+								<p class="p-0 m-0">ACABEMOS</p>
+								<p class="fs-2 p-0 m-0">con el ciclo destinado a los textiles</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="img/somos.png" class="d-block w-100" alt="imagen-carousel-2" />
+						</div>
+						<div class="carousel-item">
+							<img src="img/index-2.png" class="d-block w-100" alt="imagen-carousel-3" />
+							<div class="texto">
+								<p class="p-0 m-0">Reciclemos</p>
+								<p class="fs-2 p-0 m-0">no tires tu ropa, dónala</p>
+
+								<div>
+									<a href="/donaciones"><button class="ppal_btn">Donaciones</button></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#carouselExampleIndicators"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#carouselExampleIndicators"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</section>
+
+			<!-- Somos -->
+
+			<section class="somos">
+				<p>
+					Somos un emprendimiento liderado por mujeres que quieren cambiar la
+					<span>industria textil</span> por medio de la <span>economí­a circular</span>. Nuestra labor es
+					apoyar a los emprendimientos de <span>upcycler</span> y crear conciencia medioambiental en los
+					jóvenes.
+				</p>
+				<div>
+					<div>
+						<a href="/somos">
+							<button type="button" class="ppal_btn">Conócenos</button>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Donaciones -->
+
+			<div class="donaciones">
+				<div>
+					<img src="img/img-1.png" alt="" />
+				</div>
+				<div class="mensaje">
+					<img src="img/img-2.png" alt="" />
+					<p>No sabes donde donar?</p>
+					<div>
+						<button type="button" class="ppal_btn">Más Info.</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Catálogo -->
+
+			<div class="catalogo">
+				<a href="/tienda"><p>Tienda / Catálogo</p></a>
+				<div class="galeria">
+					<div class="galeria-cell index">
+						<img class="" src="img/algodon-2.jpg" alt="" />
+						<div class="item">
+							<span class="fs-3">Tipo de prenda</span>
+						</div>
+					</div>
+					<div class="galeria-cell index">
+						<img src="img/seda-1.jpg" alt="" />
+						<div class="item">
+							<span class="fs-3">Materiales</span>
+						</div>
+					</div>
+					<div class="galeria-cell index">
+						<img src="img/tejidos.jpg" alt="" />
+						<div class="item">
+							<span class="fs-3">Accesorios</span>
+						</div>
+					</div>
+					<div class="galeria-cell index">
+						<img src="img/jacketDenim2.jpg" alt="" />
+						<div class="item">
+							<span class="fs-3">Servicios</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script src="js/bootstrap.js"></script>
+	</body>
+</html>

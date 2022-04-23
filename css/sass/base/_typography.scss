@@ -1,0 +1,30 @@
+@font-face {
+	font-family: 'Crapaud';
+	src: url(../css/css/fonts/Crapaud/Crapaud_petit.otf);
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Crapaud';
+	src: url(../css/fonts/Crapaud/Crapaud_gros.otf);
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Metropolis';
+	src: url(../css/fonts/Metropolis/Metropolis-Regular.otf);
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Metropolis';
+	src: url(../css/fonts/Metropolis/Metropolis-Regular.otf);
+	font-style: normal;
+	font-weight: normal;
+}
+
+$ppal_font: 'Metropolis';
+$secd_font: 'Crapaud';

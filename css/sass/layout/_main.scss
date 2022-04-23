@@ -1,0 +1,109 @@
+@import '../abstracts/variables';
+@import '../components/buttons';
+
+main {
+	.carousel {
+		display: none;
+	}
+	.somos {
+		color: $ppal_fc;
+		font-family: $ppal_font;
+		font-size: 18px;
+		padding: 5% 5%;
+		text-align: justify;
+		text-align: center;
+		button {
+			margin-top: 10%;
+		}
+	}
+	.donaciones {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		background-color: #ffff;
+		background-image: url('/img/background-1.png');
+		background-size: cover;
+		padding: 60px 0;
+		img {
+			height: 300px;
+		}
+		.mensaje {
+			width: 90%;
+			margin: auto;
+			img {
+				height: 40px;
+			}
+			p {
+				font-family: $secd_font;
+				font-weight: bold;
+				font-size: 50px;
+			}
+			button {
+				width: 130px;
+			}
+		}
+	}
+	
+}
+
+@media (min-width: 600px) {
+	.carousel {
+		display: inline-block !important;
+		height: auto;
+		.carousel-indicators {
+			button {
+				background-color: $ppal_fc;
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				border: 2px solid;
+				border-color: #ffff;
+			}
+			.active {
+				background-color: $ppal_bc;
+				width: 20px;
+				height: 20px;
+				border: none;
+			}
+		}
+		.carousel-item {
+			position: relative;
+			height: 70%;
+			img {
+				height: 100%;
+			}
+			.texto {
+				position: absolute;
+				top: 30%;
+				left: 10%;
+				p {
+					-webkit-text-fill-color: $ppal_fc;
+					-webkit-text-stroke-color: #ffff;
+					-webkit-text-stroke-width: 2px;
+					text-shadow: 2px 2px 2px black;
+					font-size: 95px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	.somos {
+		padding: 3% 15% !important;
+		background-color: $ppal_fc;
+		color: #ffff !important;
+		font-size: 22px;
+		span {
+			color: $ppal_bc;
+		}
+		button {
+			margin-top: 3% !important;
+		}
+	}
+	.donaciones {
+		flex-direction: row !important;
+		justify-content: space-around !important;
+		padding: 60px 4% !important;
+	}
+	
+}

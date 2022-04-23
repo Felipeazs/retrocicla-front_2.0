@@ -1,0 +1,17 @@
+@import '../abstracts/variables';
+@import '../base/typography';
+
+.ppal_btn {
+	font-family: $secd_font;
+	font-weight: bold;
+	font-size: 22px;
+	background-color: $ppal_bc;
+	color: $ppal_fc;
+	border-radius: 50px;
+	padding: 1%;
+	width: 200px;
+	border: none;
+}
+.ppal_btn:hover {
+	background-color: $secd_bc;
+}
