@@ -10841,12 +10841,7 @@ nav .navigator ul {
   list-style-type: none;
   text-align: center;
 }
-nav .navigator li a {
-  color: #fff;
-}
 nav .navigator li:hover {
-  background-color: #f8f8f8;
-  color: #2f355b;
   border: solid 3px;
   border-color: #00ff99;
   border-radius: 50px;
@@ -10855,6 +10850,9 @@ nav .navigator .active {
   border: solid 3px;
   border-color: #00ff99;
   border-radius: 50px;
+}
+nav .navigator .active:hover {
+  border: none;
 }
 nav .carrito {
   display: flex;
@@ -10883,16 +10881,13 @@ nav .carrito i {
     height: 90px;
     object-fit: cover;
   }
+  nav .navigator {
+    display: flex;
+    flex-direction: row;
+  }
   nav .navigator ul {
     flex-direction: row !important;
     justify-content: center;
-  }
-  nav .navigator li:hover {
-    background-color: #f8f8f8;
-    color: #2f355b;
-    border: solid 3px;
-    border-color: #00ff99;
-    border-radius: 50px;
   }
   nav .carrito {
     left: 0%;
@@ -10932,13 +10927,41 @@ nav .carrito i {
   background-color: #00ff99;
   color: #2f355b;
   border-radius: 50px;
+  border: none;
   padding: 1%;
   width: 200px;
-  border: none;
 }
 
 .ppal_btn:hover {
   background-color: #f8f8f8;
+  border: 2px solid;
+  border-color: #2f355b;
+}
+
+.seccion-mensaje, main .video, main .donaciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  background-image: url("../img/background-1.png");
+  background-size: cover;
+  padding: 10% 1%;
+}
+.seccion-mensaje .mensaje, main .video .mensaje, main .donaciones .mensaje {
+  width: 90%;
+  margin: auto;
+}
+.seccion-mensaje .mensaje img, main .video .mensaje img, main .donaciones .mensaje img {
+  height: 40px;
+}
+.seccion-mensaje .mensaje p, main .video .mensaje p, main .donaciones .mensaje p {
+  font-family: "Crapaud";
+  font-weight: bold;
+  font-size: 50px;
+}
+.seccion-mensaje .mensaje button, main .video .mensaje button, main .donaciones .mensaje button {
+  width: 130px;
 }
 
 main .carousel {
@@ -10955,33 +10978,17 @@ main .somos {
 main .somos button {
   margin-top: 10%;
 }
-main .donaciones {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-color: white;
-  background-image: url("/img/background-1.png");
-  background-size: cover;
-  padding: 60px 0;
-}
 main .donaciones img {
   height: 300px;
 }
-main .donaciones .mensaje {
-  width: 90%;
-  margin: auto;
+main .video iframe {
+  border-radius: 20px;
 }
-main .donaciones .mensaje img {
-  height: 40px;
-}
-main .donaciones .mensaje p {
+main .noticias p {
   font-family: "Crapaud";
-  font-weight: bold;
-  font-size: 50px;
-}
-main .donaciones .mensaje button {
-  width: 130px;
+  color: #2f355b;
+  font-size: 2rem;
+  text-align: center;
 }
 
 @media (min-width: 600px) {
@@ -11037,7 +11044,8 @@ main .donaciones .mensaje button {
     margin-top: 3% !important;
   }
 
-  .donaciones {
+  .donaciones,
+.video {
     flex-direction: row !important;
     justify-content: space-around !important;
     padding: 60px 4% !important;
@@ -11074,15 +11082,13 @@ main .donaciones .mensaje button {
   font-weight: bold;
   font-size: 22px;
 }
-.catalogo a {
-  text-decoration: none;
-}
 .catalogo p,
 .catalogo span {
   font-family: "Crapaud";
+  color: #2f355b;
   font-size: 2rem;
   text-align: center;
-  color: #2f355b;
+  display: inline-block;
 }
 .catalogo .galeria {
   display: flex;
@@ -11131,6 +11137,11 @@ main .donaciones .mensaje button {
 body {
   font-family: "Metropolis";
   color: #2f355b;
+}
+
+a {
+  text-decoration: none;
+  color: #fff !important;
 }
 
 /*# sourceMappingURL=style.css.map */

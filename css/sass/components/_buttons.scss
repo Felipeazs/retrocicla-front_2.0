@@ -2,16 +2,18 @@
 @import '../base/typography';
 
 .ppal_btn {
-	font-family: $secd_font;
+	font-family: $scd_font;
 	font-weight: bold;
 	font-size: 22px;
 	background-color: $ppal_bc;
 	color: $ppal_fc;
 	border-radius: 50px;
+	border: none;
 	padding: 1%;
 	width: 200px;
-	border: none;
 }
 .ppal_btn:hover {
-	background-color: $secd_bc;
+	background-color: $scd_bc;
+	border: 2px solid;
+	border-color: $ppal_fc;
 }

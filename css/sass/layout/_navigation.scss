@@ -19,12 +19,8 @@ nav {
 			list-style-type: none;
 			text-align: center;
 		}
-		li a {
-			color: #fff;
-		}
+
 		li:hover {
-			background-color: $secd_bc;
-			color: $ppal_fc;
 			border: solid 3px;
 			border-color: #00ff99;
 			border-radius: 50px;
@@ -33,6 +29,9 @@ nav {
 			border: solid 3px;
 			border-color: #00ff99;
 			border-radius: 50px;
+		}
+		.active:hover {
+			border: none;
 		}
 	}
 	.carrito {
@@ -62,16 +61,11 @@ nav {
 			object-fit: cover;
 		}
 		.navigator {
+			display: flex;
+			flex-direction: row;
 			ul {
 				flex-direction: row !important;
 				justify-content: center;
-			}
-			li:hover {
-				background-color: $secd_bc;
-				color: $ppal_fc;
-				border: solid 3px;
-				border-color: #00ff99;
-				border-radius: 50px;
 			}
 		}
 		.carrito {

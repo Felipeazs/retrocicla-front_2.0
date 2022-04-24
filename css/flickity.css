@@ -48,7 +48,7 @@
   border-bottom-right-radius: 50px;
   padding-left: 10px;
 }
-.galeria-cell i:hover {
+.galeria-cell:hover {
   background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
@@ -69,6 +69,7 @@ strong {
 .galeria-detalle {
   background-color: #f8f8f8;
 }
+
 .flickity-prev-next-button {
   background-color: #00ff99;
 }
@@ -77,4 +78,9 @@ strong {
 }
 .flickity-page-dots {
   display: none;
+}
+@media (min-width: 600px) {
+  .flickity-slider {
+    left: -30% !important;
+  }
 }

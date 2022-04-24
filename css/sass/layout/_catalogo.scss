@@ -2,20 +2,18 @@
 @import '../base/typography';
 
 .catalogo {
-	background-color: $secd_bc;
+	background-color: $scd_bc;
 	text-align: center;
 	padding: 2.5% 0;
 	font-weight: bold;
 	font-size: 22px;
-	a {
-		text-decoration: none;
-	}
 	p,
 	span {
-		font-family: $secd_font;
+		font-family: $scd_font;
+		color: $ppal_fc;
 		font-size: 2rem;
 		text-align: center;
-		color: $ppal_fc;
+		display: inline-block;
 	}
 	.galeria {
 		display: flex;

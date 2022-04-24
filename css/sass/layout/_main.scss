@@ -1,6 +1,32 @@
 @import '../abstracts/variables';
 @import '../components/buttons';
 
+.seccion-mensaje {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	background-color: #ffff;
+	background-image: url('../img/background-1.png');
+	background-size: cover;
+	padding: 10% 1%;
+	.mensaje {
+		width: 90%;
+		margin: auto;
+		img {
+			height: 40px;
+		}
+		p {
+			font-family: $scd_font;
+			font-weight: bold;
+			font-size: 50px;
+		}
+		button {
+			width: 130px;
+		}
+	}
+}
+
 main {
 	.carousel {
 		display: none;
@@ -17,34 +43,25 @@ main {
 		}
 	}
 	.donaciones {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		text-align: center;
-		background-color: #ffff;
-		background-image: url('/img/background-1.png');
-		background-size: cover;
-		padding: 60px 0;
+		@extend .seccion-mensaje;
 		img {
 			height: 300px;
 		}
-		.mensaje {
-			width: 90%;
-			margin: auto;
-			img {
-				height: 40px;
-			}
-			p {
-				font-family: $secd_font;
-				font-weight: bold;
-				font-size: 50px;
-			}
-			button {
-				width: 130px;
-			}
+	}
+	.video {
+		@extend .seccion-mensaje;
+		iframe {
+			border-radius: 20px;
 		}
 	}
-	
+	.noticias {
+		p {
+			font-family: $scd_font;
+			color: $ppal_fc;
+			font-size: 2rem;
+			text-align: center;
+		}
+	}
 }
 
 @media (min-width: 600px) {
@@ -100,10 +117,10 @@ main {
 			margin-top: 3% !important;
 		}
 	}
-	.donaciones {
+	.donaciones,
+	.video {
 		flex-direction: row !important;
 		justify-content: space-around !important;
 		padding: 60px 4% !important;
 	}
-	
 }
