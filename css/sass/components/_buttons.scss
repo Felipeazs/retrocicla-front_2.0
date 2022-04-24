@@ -2,7 +2,7 @@
 @import '../base/typography';
 
 .ppal_btn {
-	font-family: $scd_font;
+	font-family: $scd_font_b;
 	font-weight: bold;
 	font-size: 22px;
 	background-color: $ppal_bc;
@@ -16,4 +16,27 @@
 	background-color: $scd_bc;
 	border: 2px solid;
 	border-color: $ppal_fc;
+	i {
+		color: $ppal_fc !important;
+	}
+}
+.round_btn {
+	@extend .ppal_btn;
+	width: 40px;
+	height: 40px;
+	margin: 2% 1%;
+	i {
+		color: #ffff;
+		vertical-align: middle;
+	}
+}
+.round_btn:hover {
+	width: 38px !important;
+	height: 36px !important;
+}
+@media (min-width: 600px) {
+	.round_btn:hover {
+		width: 43px !important;
+		height: 36px !important;
+	}
 }

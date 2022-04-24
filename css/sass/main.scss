@@ -1,5 +1,6 @@
 @import 'vendors/bootstrap/scss/bootstrap.scss';
-@import 'layout/header', 'layout/navigation', 'layout/main', 'layout/catalogo';
+@import 'layout/header', 'layout/navigation', 'layout/main', 'layout/catalogo', 'layout/newsletter', 'layout/support',
+	'layout/footer';
 @import 'base/typography';
 @import 'abstracts/variables';
 
@@ -14,4 +15,11 @@ body {
 a {
 	text-decoration: none;
 	color: #fff !important;
+}
+i {
+	font-size: 25px;
+}
+i:hover {
+	color: $ppal_bc;
+	cursor: pointer;
 }

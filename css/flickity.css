@@ -65,6 +65,7 @@
 strong {
   color: #2f355b;
   font-size: medium;
+  font-family: 'Crapaud';
 }
 .galeria-detalle {
   background-color: #f8f8f8;
@@ -72,6 +73,7 @@ strong {
 
 .flickity-prev-next-button {
   background-color: #00ff99;
+  width: 38px;
 }
 .flickity-prev-next-button .arrow {
   fill: #ffff;

@@ -1,5 +1,6 @@
 @import '../abstracts/variables';
-@import '../components/buttons';
+@import '../components/buttons', '../components/inputs';
+@import '../base/typography';
 
 .seccion-mensaje {
 	display: flex;
@@ -17,7 +18,7 @@
 			height: 40px;
 		}
 		p {
-			font-family: $scd_font;
+			font-family: $scd_font_b;
 			font-weight: bold;
 			font-size: 50px;
 		}
@@ -30,6 +31,7 @@
 main {
 	.carousel {
 		display: none;
+		background-color: $ppal_fc;
 	}
 	.somos {
 		color: $ppal_fc;
@@ -38,6 +40,9 @@ main {
 		padding: 5% 5%;
 		text-align: justify;
 		text-align: center;
+		span {
+			font-weight: bolder;
+		}
 		button {
 			margin-top: 10%;
 		}
@@ -54,12 +59,18 @@ main {
 			border-radius: 20px;
 		}
 	}
-	.noticias {
+	.blog-noticias {
+		background-color: $scd_bc;
+		padding: 2.5% 3vw;
 		p {
-			font-family: $scd_font;
+			font-family: $scd_font_b;
 			color: $ppal_fc;
 			font-size: 2rem;
 			text-align: center;
+		}
+		.item span {
+			font-family: $scd_font_b;
+			text-align: start;
 		}
 	}
 }
@@ -121,6 +132,6 @@ main {
 	.video {
 		flex-direction: row !important;
 		justify-content: space-around !important;
-		padding: 60px 4% !important;
+		padding: 6% 10% !important;
 	}
 }

@@ -1,19 +1,25 @@
 @import '../abstracts/variables';
 @import '../base/typography';
 
+.org {
+	color: $ppal_fc;
+	font-size: 2rem;
+	text-align: center;
+	display: inline-block;
+}
 .catalogo {
 	background-color: $scd_bc;
 	text-align: center;
 	padding: 2.5% 0;
 	font-weight: bold;
 	font-size: 22px;
-	p,
+	p {
+		@extend .org;
+		font-family: $scd_font_b;
+	}
 	span {
+		@extend .org;
 		font-family: $scd_font;
-		color: $ppal_fc;
-		font-size: 2rem;
-		text-align: center;
-		display: inline-block;
 	}
 	.galeria {
 		display: flex;

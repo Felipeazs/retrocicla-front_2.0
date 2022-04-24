@@ -10757,6 +10757,8 @@ header {
 header .email {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  cursor: pointer;
 }
 header .email p {
   font-size: 15px;
@@ -10764,10 +10766,6 @@ header .email p {
 }
 header .upcycling {
   display: none;
-}
-
-i {
-  font-size: 15px;
 }
 
 p {
@@ -10801,18 +10799,18 @@ p {
 }
 @font-face {
   font-family: "Crapaud";
-  src: url(../css/css/fonts/Crapaud/Crapaud_petit.otf);
+  src: url(../css/fonts/Crapaud/Crapaud_petit.otf);
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: "Crapaud";
+  font-family: "Crapaud-bold";
   src: url(../css/fonts/Crapaud/Crapaud_gros.otf);
   font-style: normal;
   font-weight: bold;
 }
 @font-face {
-  font-family: "Metropolis";
+  font-family: "Metropolis-bold";
   src: url(../css/fonts/Metropolis/Metropolis-Regular.otf);
   font-style: normal;
   font-weight: bold;
@@ -10898,18 +10896,18 @@ nav .carrito i {
 }
 @font-face {
   font-family: "Crapaud";
-  src: url(../css/css/fonts/Crapaud/Crapaud_petit.otf);
+  src: url(../css/fonts/Crapaud/Crapaud_petit.otf);
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: "Crapaud";
+  font-family: "Crapaud-bold";
   src: url(../css/fonts/Crapaud/Crapaud_gros.otf);
   font-style: normal;
   font-weight: bold;
 }
 @font-face {
-  font-family: "Metropolis";
+  font-family: "Metropolis-bold";
   src: url(../css/fonts/Metropolis/Metropolis-Regular.otf);
   font-style: normal;
   font-weight: bold;
@@ -10920,8 +10918,8 @@ nav .carrito i {
   font-style: normal;
   font-weight: normal;
 }
-.ppal_btn {
-  font-family: "Crapaud";
+.ppal_btn, .round_btn {
+  font-family: "Crapaud-bold";
   font-weight: bold;
   font-size: 22px;
   background-color: #00ff99;
@@ -10932,12 +10930,86 @@ nav .carrito i {
   width: 200px;
 }
 
-.ppal_btn:hover {
+.ppal_btn:hover, .round_btn:hover {
   background-color: #f8f8f8;
   border: 2px solid;
   border-color: #2f355b;
 }
+.ppal_btn:hover i, .round_btn:hover i {
+  color: #2f355b !important;
+}
 
+.round_btn {
+  width: 40px;
+  height: 40px;
+  margin: 2% 1%;
+}
+.round_btn i {
+  color: white;
+  vertical-align: middle;
+}
+
+.round_btn:hover {
+  width: 38px !important;
+  height: 36px !important;
+}
+
+@media (min-width: 600px) {
+  .round_btn:hover {
+    width: 43px !important;
+    height: 36px !important;
+  }
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input input {
+  border-radius: 50px;
+  width: 300px;
+  background-color: #7d66ec;
+  border: 2px solid;
+  border-color: white;
+  color: white;
+  padding: 2% 4%;
+}
+.input input::placeholder {
+  color: white;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+@media (min-width: 600px) {
+  .input {
+    flex-direction: row;
+  }
+}
+@font-face {
+  font-family: "Crapaud";
+  src: url(../css/fonts/Crapaud/Crapaud_petit.otf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Crapaud-bold";
+  src: url(../css/fonts/Crapaud/Crapaud_gros.otf);
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Metropolis-bold";
+  src: url(../css/fonts/Metropolis/Metropolis-Regular.otf);
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Metropolis";
+  src: url(../css/fonts/Metropolis/Metropolis-Regular.otf);
+  font-style: normal;
+  font-weight: normal;
+}
 .seccion-mensaje, main .video, main .donaciones {
   display: flex;
   flex-direction: column;
@@ -10956,7 +11028,7 @@ nav .carrito i {
   height: 40px;
 }
 .seccion-mensaje .mensaje p, main .video .mensaje p, main .donaciones .mensaje p {
-  font-family: "Crapaud";
+  font-family: "Crapaud-bold";
   font-weight: bold;
   font-size: 50px;
 }
@@ -10966,6 +11038,7 @@ nav .carrito i {
 
 main .carousel {
   display: none;
+  background-color: #2f355b;
 }
 main .somos {
   color: #2f355b;
@@ -10974,6 +11047,9 @@ main .somos {
   padding: 5% 5%;
   text-align: justify;
   text-align: center;
+}
+main .somos span {
+  font-weight: bolder;
 }
 main .somos button {
   margin-top: 10%;
@@ -10984,11 +11060,19 @@ main .donaciones img {
 main .video iframe {
   border-radius: 20px;
 }
-main .noticias p {
-  font-family: "Crapaud";
+main .blog-noticias {
+  background-color: #f8f8f8;
+  padding: 2.5% 3vw;
+}
+main .blog-noticias p {
+  font-family: "Crapaud-bold";
   color: #2f355b;
   font-size: 2rem;
   text-align: center;
+}
+main .blog-noticias .item span {
+  font-family: "Crapaud-bold";
+  text-align: start;
 }
 
 @media (min-width: 600px) {
@@ -11048,23 +11132,23 @@ main .noticias p {
 .video {
     flex-direction: row !important;
     justify-content: space-around !important;
-    padding: 60px 4% !important;
+    padding: 6% 10% !important;
   }
 }
 @font-face {
   font-family: "Crapaud";
-  src: url(../css/css/fonts/Crapaud/Crapaud_petit.otf);
+  src: url(../css/fonts/Crapaud/Crapaud_petit.otf);
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: "Crapaud";
+  font-family: "Crapaud-bold";
   src: url(../css/fonts/Crapaud/Crapaud_gros.otf);
   font-style: normal;
   font-weight: bold;
 }
 @font-face {
-  font-family: "Metropolis";
+  font-family: "Metropolis-bold";
   src: url(../css/fonts/Metropolis/Metropolis-Regular.otf);
   font-style: normal;
   font-weight: bold;
@@ -11075,6 +11159,13 @@ main .noticias p {
   font-style: normal;
   font-weight: normal;
 }
+.org, .catalogo span, .catalogo p {
+  color: #2f355b;
+  font-size: 2rem;
+  text-align: center;
+  display: inline-block;
+}
+
 .catalogo {
   background-color: #f8f8f8;
   text-align: center;
@@ -11082,13 +11173,11 @@ main .noticias p {
   font-weight: bold;
   font-size: 22px;
 }
-.catalogo p,
+.catalogo p {
+  font-family: "Crapaud-bold";
+}
 .catalogo span {
   font-family: "Crapaud";
-  color: #2f355b;
-  font-size: 2rem;
-  text-align: center;
-  display: inline-block;
 }
 .catalogo .galeria {
   display: flex;
@@ -11105,20 +11194,124 @@ main .noticias p {
     justify-content: center;
   }
 }
+.newsletter {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  background-color: #7d66ec;
+  padding: 1% 5%;
+}
+.newsletter img {
+  display: none;
+  align-self: center;
+  width: 200px;
+}
+.newsletter .centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+}
+.newsletter .centro p {
+  text-align: center;
+  font-size: 35px;
+  width: 98%;
+  margin: 0 0;
+}
+.newsletter .centro span {
+  text-align: center;
+  color: #00ff99;
+  font-size: 15px;
+  width: 90%;
+  margin: 10px 0;
+}
+
+@media (min-width: 600px) {
+  .newsletter img {
+    display: inline-block;
+  }
+  .newsletter .centro button {
+    height: 40px;
+    width: 50px;
+  }
+}
+.support {
+  padding: 50px 5%;
+  text-align: center;
+}
+.support p {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.support .marca img {
+  width: 200px;
+  margin: 20px 20px;
+}
+
+footer {
+  background-color: #2f355b;
+  color: white;
+  font-family: "Metropolis";
+  padding: 0 10%;
+}
+footer .img-horario-contacto {
+  text-align: center;
+}
+footer .img-horario-contacto img {
+  width: 190px;
+  height: 120px;
+  object-fit: cover;
+}
+footer .contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+footer .contacto i {
+  font-size: 25px;
+}
+footer .contacto i:hover {
+  color: #00ff99 !important;
+  cursor: pointer;
+}
+footer .terminos-y-condiciones {
+  text-align: center;
+}
+footer .terminos-y-condiciones a:hover {
+  color: #00ff99 !important;
+}
+
+@media (min-width: 600px) {
+  .img-horario-contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .terminos-y-condiciones {
+    padding: 10px 0 30px 0;
+  }
+}
 @font-face {
   font-family: "Crapaud";
-  src: url(../css/css/fonts/Crapaud/Crapaud_petit.otf);
+  src: url(../css/fonts/Crapaud/Crapaud_petit.otf);
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: "Crapaud";
+  font-family: "Crapaud-bold";
   src: url(../css/fonts/Crapaud/Crapaud_gros.otf);
   font-style: normal;
   font-weight: bold;
 }
 @font-face {
-  font-family: "Metropolis";
+  font-family: "Metropolis-bold";
   src: url(../css/fonts/Metropolis/Metropolis-Regular.otf);
   font-style: normal;
   font-weight: bold;
@@ -11142,6 +11335,15 @@ body {
 a {
   text-decoration: none;
   color: #fff !important;
+}
+
+i {
+  font-size: 25px;
+}
+
+i:hover {
+  color: #00ff99;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

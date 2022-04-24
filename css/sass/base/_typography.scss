@@ -1,19 +1,19 @@
 @font-face {
 	font-family: 'Crapaud';
-	src: url(../css/css/fonts/Crapaud/Crapaud_petit.otf);
+	src: url(../css/fonts/Crapaud/Crapaud_petit.otf);
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
-	font-family: 'Crapaud';
+	font-family: 'Crapaud-bold';
 	src: url(../css/fonts/Crapaud/Crapaud_gros.otf);
 	font-style: normal;
 	font-weight: bold;
 }
 
 @font-face {
-	font-family: 'Metropolis';
+	font-family: 'Metropolis-bold';
 	src: url(../css/fonts/Metropolis/Metropolis-Regular.otf);
 	font-style: normal;
 	font-weight: bold;
@@ -27,4 +27,6 @@
 }
 
 $ppal_font: 'Metropolis';
+$ppal_font_b: 'Metropolis-bold';
 $scd_font: 'Crapaud';
+$scd_font_b: 'Crapaud-bold';
