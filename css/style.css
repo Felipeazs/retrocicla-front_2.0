@@ -10831,7 +10831,7 @@ nav .navigator ul {
   flex-direction: column;
   align-items: center;
   padding: 0;
-  margin: 0 4%;
+  margin: 0 7%;
   list-style-type: none;
   text-align: center;
 }
@@ -10854,9 +10854,9 @@ nav .carrito {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  left: 70%;
+  left: 37%;
   height: 50px;
-  width: 100px;
+  width: 150px;
 }
 
 @media (min-width: 600px) {
@@ -10910,7 +10910,7 @@ nav .carrito {
   font-style: normal;
   font-weight: normal;
 }
-.ppal_btn, .round_btn {
+.ppal_btn, .round_btn, .btn .round_btn, .btn .ppal_btn {
   font-family: "Crapaud-bold";
   font-weight: bold;
   font-size: 22px;
@@ -10922,6 +10922,9 @@ nav .carrito {
   width: 200px;
 }
 
+.btn {
+  height: 40px;
+}
 .ppal_btn:hover, .round_btn:hover {
   background-color: #f8f8f8;
   border: 2px solid;
@@ -11055,7 +11058,7 @@ main .somos {
   font-family: "Metropolis";
   font-size: 18px;
   padding: 5% 5%;
-  text-align: justify;
+  height: 300px;
   text-align: center;
 }
 main .somos span {
@@ -11115,6 +11118,7 @@ main .blog-noticias .item span {
   }
 
   .somos {
+    height: 200px !important;
     padding: 3% 15% !important;
     background-color: #2f355b;
     color: white !important;

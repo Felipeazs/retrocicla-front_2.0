@@ -13,7 +13,7 @@ main {
 		font-family: $ppal_font;
 		font-size: 18px;
 		padding: 5% 5%;
-		text-align: justify;
+		height: 300px;
 		text-align: center;
 		span {
 			font-weight: bolder;
@@ -27,7 +27,6 @@ main {
 	}
 	.video {
 		@extend .seccion-mensaje;
-		
 	}
 	.blog-noticias {
 		background-color: $scd_bc;
@@ -85,6 +84,7 @@ main {
 		}
 	}
 	.somos {
+		height: 200px !important;
 		padding: 3% 15% !important;
 		background-color: $ppal_fc;
 		color: #ffff !important;

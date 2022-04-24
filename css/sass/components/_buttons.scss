@@ -1,6 +1,5 @@
 @import '../abstracts/variables';
 @import '../base/typography';
-
 .ppal_btn {
 	font-family: $scd_font_b;
 	font-weight: bold;
@@ -11,6 +10,12 @@
 	border: none;
 	padding: 1%;
 	width: 200px;
+}
+.btn {
+	height: 40px;
+	.ppal_btn {
+		@extend .ppal_btn;
+	}
 }
 .ppal_btn:hover {
 	background-color: $scd_bc;
