@@ -1,0 +1,43 @@
+@import '../abstracts/variables';
+
+.seccion-mensaje {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	background-color: #ffff;
+	background-image: url('../img/background-1.png');
+	background-size: cover;
+	padding: 10% 1%;
+	img {
+		height: 300px;
+	}
+	iframe {
+		height: 300px;
+		border-radius: 20px;
+	}
+	.mensaje {
+		width: 90%;
+		margin: auto;
+		img {
+			height: 40px;
+		}
+		p {
+			font-family: $scd_font_b;
+			font-weight: bold;
+			font-size: 50px;
+		}
+		button {
+			width: 130px;
+		}
+	}
+}
+.org {
+	font-family: $scd_font_b;
+	color: $ppal_fc;
+	font-size: 2rem;
+	display: inline-block;
+}
+.org:hover {
+	color: $ppal_bc;
+}

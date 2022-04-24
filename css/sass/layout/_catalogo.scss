@@ -1,12 +1,7 @@
 @import '../abstracts/variables';
 @import '../base/typography';
+@import '../base/functions';
 
-.org {
-	color: $ppal_fc;
-	font-size: 2rem;
-	text-align: center;
-	display: inline-block;
-}
 .catalogo {
 	background-color: $scd_bc;
 	text-align: center;
@@ -15,7 +10,7 @@
 	font-size: 22px;
 	p {
 		@extend .org;
-		font-family: $scd_font_b;
+		
 	}
 	span {
 		@extend .org;

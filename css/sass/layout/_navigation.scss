@@ -19,7 +19,6 @@ nav {
 			list-style-type: none;
 			text-align: center;
 		}
-
 		li:hover {
 			border: solid 3px;
 			border-color: #00ff99;
@@ -43,10 +42,6 @@ nav {
 		left: 70%;
 		height: 50px;
 		width: 100px;
-		i {
-			color: #fff;
-			font-size: 18px;
-		}
 	}
 }
 @media (min-width: 600px) {

@@ -1,32 +1,7 @@
 @import '../abstracts/variables';
 @import '../components/buttons', '../components/inputs';
 @import '../base/typography';
-
-.seccion-mensaje {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	background-color: #ffff;
-	background-image: url('../img/background-1.png');
-	background-size: cover;
-	padding: 10% 1%;
-	.mensaje {
-		width: 90%;
-		margin: auto;
-		img {
-			height: 40px;
-		}
-		p {
-			font-family: $scd_font_b;
-			font-weight: bold;
-			font-size: 50px;
-		}
-		button {
-			width: 130px;
-		}
-	}
-}
+@import '../base/functions';
 
 main {
 	.carousel {
@@ -49,24 +24,17 @@ main {
 	}
 	.donaciones {
 		@extend .seccion-mensaje;
-		img {
-			height: 300px;
-		}
 	}
 	.video {
 		@extend .seccion-mensaje;
-		iframe {
-			border-radius: 20px;
-		}
+		
 	}
 	.blog-noticias {
 		background-color: $scd_bc;
 		padding: 2.5% 3vw;
+		text-align: center;
 		p {
-			font-family: $scd_font_b;
-			color: $ppal_fc;
-			font-size: 2rem;
-			text-align: center;
+			@extend .org;
 		}
 		.item span {
 			font-family: $scd_font_b;
