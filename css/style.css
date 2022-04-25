@@ -11067,6 +11067,52 @@ main .somos span {
 main .somos button {
   margin-top: 10%;
 }
+main .somos .pines {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 5%;
+  width: 100%;
+  margin: auto;
+}
+main .somos .pines img {
+  width: 40%;
+}
+main .somos-imgs .image-2 {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  object-fit: cover;
+}
+main .somos-imgs .image-1 {
+  display: none;
+}
+main .somos-txt {
+  text-align: center;
+}
+main .somos-txt p {
+  background-color: #2f355b;
+  color: white;
+  font-family: "Metropolis";
+  font-size: 20px;
+  padding: 5% 2%;
+}
+main .somos-txt span {
+  color: #00ff99;
+}
+main .somos-txt .pines {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 3% 1%;
+  width: 100%;
+  margin: auto;
+}
+main .somos-txt .pines img {
+  width: 40%;
+}
 main .blog-noticias {
   background-color: #f8f8f8;
   padding: 2.5% 3vw;
@@ -11129,6 +11175,84 @@ main .blog-noticias .item span {
   }
   .somos button {
     margin-top: 3% !important;
+  }
+
+  .somos-txt p {
+    padding: 8% 14% !important;
+    margin-bottom: -10% !important;
+  }
+  .somos-txt .pines {
+    flex-direction: row !important;
+    position: relative;
+    background-color: transparent !important;
+    width: 80% !important;
+    margin-bottom: -17% !important;
+  }
+  .somos-txt .pines img {
+    width: 100% !important;
+    height: 100%;
+  }
+
+  .somos-imgs .image-1 {
+    display: inline-block !important;
+    position: absolute;
+    z-index: 3;
+    width: 30%;
+    top: 30%;
+    left: 10%;
+  }
+
+  .mision-valores {
+    background-color: white;
+    height: 100%;
+    padding: 20% 0;
+  }
+  .mision-valores .mision {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 5% 3%;
+    width: 60%;
+    margin: auto;
+    border: 5px dotted;
+    border-radius: 50px;
+    height: 100%;
+  }
+  .mision-valores .mision .principal {
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 3px dotted;
+    padding: 20px;
+  }
+  .mision-valores .mision p {
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 3px dotted;
+    margin: 0 0;
+  }
+  .mision-valores .img-1 {
+    position: absolute;
+    right: 22%;
+    width: 200px;
+    margin-top: -20px;
+  }
+  .mision-valores .img-2 {
+    position: absolute;
+    left: 22%;
+    width: 200px;
+    margin-top: -3%;
+  }
+  .mision-valores .img-3 {
+    position: absolute;
+    left: 16%;
+    width: 100px;
+    margin-top: -4%;
+  }
+  .mision-valores .img-4 {
+    position: absolute;
+    right: 18%;
+    width: 100px;
+    margin-top: 40px;
   }
 
   .donaciones,

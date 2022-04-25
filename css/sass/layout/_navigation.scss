@@ -21,12 +21,12 @@ nav {
 		}
 		li:hover {
 			border: solid 3px;
-			border-color: #00ff99;
+			border-color: $ppal_bc;
 			border-radius: 50px;
 		}
 		.active {
 			border: solid 3px;
-			border-color: #00ff99;
+			border-color: $ppal_bc;
 			border-radius: 50px;
 		}
 		.active:hover {

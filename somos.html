@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--Bootstrap iconos-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+		<!--FontAwesome-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!--Flickity gallery-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+		<link rel="stylesheet" href="css/flickity.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Somos</title>
+	</head>
+	<body>
+		<!-- Header -->
+
+		<header>
+			<div class="email">
+				<div><i class="bi bi-envelope"></i></div>
+				<p>retrocicla@gmail.com</p>
+			</div>
+			<div class="upcycling">
+				<p>Upcycling Chile</p>
+			</div>
+			<div class="icons">
+				<i class="bi bi-whatsapp pe-3"></i>
+				<i class="bi bi-instagram pe-3"></i>
+				<i class="bi bi-facebook"></i>
+			</div>
+		</header>
+
+		<nav>
+			<div class="navigator">
+				<div>
+					<img src="img/logo-menu.png" alt="logo" />
+				</div>
+				<ul>
+					<li class="nav-item">
+						<a class="nav-link" href="/">INICIO</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="/somos">SOMOS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/tienda">TIENDA</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/donaciones">DONACIONES</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/blog">BLOG</a>
+					</li>
+				</ul>
+			</div>
+
+			<!--Usuario y Carrito-->
+
+			<div class="carrito">
+				<div class="bag">
+					<a href="/carrito"><i class="bi bi-bag"></i></a>
+					<div class="span text-center"></div>
+				</div>
+				<div class="person">
+					<a href="/login"><i class="bi bi-person-circle"></i></a>
+				</div>
+				<div class="logout">
+					<c:if test="${ not empty cliente }">
+						<a href="/logout">
+							<div class="salir">
+								<span>Salir</span>
+							</div>
+						</a>
+					</c:if>
+				</div>
+			</div>
+		</nav>
+		<main>
+			<section class="somos-imgs">
+				<img class="image-1" src="img/somos-text.png" alt="" />
+				<img class="image-2" src="img/somos.png" alt="" />
+			</section>
+			<article class="somos-txt">
+				<p>
+					Somos una empresa liderada por <span>5 mujeres</span>, de la región de Valparaíso que se dedican a
+					la gestión del reciclaje textil. A través de nuestra propuesta buscamos generar conciencia respecto
+					a los <span>desechos textiles</span>, y a recuperar su valor.
+				</p>
+				<div class="pines">
+					<div><img src="img/somos-1.png" alt="" /></div>
+					<div>
+						<img src="img/somos-2.png" alt="" />
+					</div>
+					<div>
+						<img src="img/somos-3.png" alt="" />
+					</div>
+					<div><img src="img/somos-4.png" alt="" /></div>
+					<div><img src="img/somos-5.png" alt="" /></div>
+				</div>
+			</article>
+			<article class="mision-valores">
+				<img class="img-1" src="img/recupera-white.png" alt="" />
+				<img class="img-4" src="img/clip.png" alt="" />
+				<div class="mision">
+					<p class="principal">Misión</p>
+					<p>Crear un mundo más sostenible por medio de la recuperación textil.</p>
+					<p class="principal">Visión</p>
+					<p>
+						Empresa líder en reciclaje textil en latinoamérica potencia la economía circular para la
+						creación de un mundo más sostenible.
+					</p>
+					<p class="principal">Nuestros valores</p>
+					<p>
+						Amistad y compañerismo / Trabajo colaborativo / Desarrollo sostenible de la industria de la moda
+						/ Upcycling es una herramienta de cambio / Producción y consumo responsable / Consumidores
+						responsables / Sociedad más consciente / Responsabilidad con el medio ambiente / Agentes de
+						cambio, que revolucionan la industria / La moda del futuro es sustentable / La moda puede ser
+						más transparente, responsable, colaborativa y genere salarios justos y equitativos.
+					</p>
+				</div>
+				<img class="img-3" src="img/retrocicla-round.png" alt="" />
+				<img class="img-2" src="img/upcycling.png" alt="" />
+			</article>
+		</main>
+	</body>
+</html>

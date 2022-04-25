@@ -21,6 +21,54 @@ main {
 		button {
 			margin-top: 10%;
 		}
+		.pines {
+			display: flex;
+			flex-direction: column;
+			background-color: #ffff;
+			padding: 5%;
+			width: 100%;
+			margin: auto;
+			img {
+				width: 40%;
+			}
+		}
+	}
+	.somos-imgs {
+		.image-2 {
+			position: relative;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			margin: auto;
+			object-fit: cover;
+		}
+		.image-1 {
+			display: none;
+		}
+	}
+	.somos-txt {
+		text-align: center;
+		p {
+			background-color: $ppal_fc;
+			color: #ffff;
+			font-family: 'Metropolis';
+			font-size: 20px;
+			padding: 5% 2%;
+		}
+		span {
+			color: #00ff99;
+		}
+		.pines {
+			display: flex;
+			flex-direction: column;
+			background-color: #ffff;
+			padding: 3% 1%;
+			width: 100%;
+			margin: auto;
+			img {
+				width: 40%;
+			}
+		}
 	}
 	.donaciones {
 		@extend .seccion-mensaje;
@@ -94,6 +142,86 @@ main {
 		}
 		button {
 			margin-top: 3% !important;
+		}
+	}
+	.somos-txt {
+		p {
+			padding: 8% 14% !important;
+			margin-bottom: -10% !important;
+		}
+		.pines {
+			flex-direction: row !important;
+			position: relative;
+			background-color: transparent !important;
+			width: 80% !important;
+			margin-bottom: -17% !important;
+			img {
+				width: 100% !important;
+				height: 100%;
+			}
+		}
+	}
+	.somos-imgs {
+		.image-1 {
+			display: inline-block !important;
+			position: absolute;
+			z-index: 3;
+			width: 30%;
+			top: 30%;
+			left: 10%;
+		}
+	}
+	.mision-valores {
+		background-color: #ffff;
+		height: 100%;
+		padding: 20% 0;
+		.mision {
+			background-color: #ffff;
+			display: flex;
+			flex-direction: column;
+			padding: 5% 3%;
+			width: 60%;
+			margin: auto;
+			border: 5px dotted;
+			border-radius: 50px;
+			height: 100%;
+			.principal {
+				font-size: 22px;
+				font-weight: bold;
+				border-bottom: 3px dotted;
+				padding: 20px;
+			}
+			p {
+				font-size: 22px;
+				font-weight: bold;
+				border-bottom: 3px dotted;
+				margin: 0 0;
+			}
+		}
+
+		.img-1 {
+			position: absolute;
+			right: 22%;
+			width: 200px;
+			margin-top: -20px;
+		}
+		.img-2 {
+			position: absolute;
+			left: 22%;
+			width: 200px;
+			margin-top: -3%;
+		}
+		.img-3 {
+			position: absolute;
+			left: 16%;
+			width: 100px;
+			margin-top: -4%;
+		}
+		.img-4 {
+			position: absolute;
+			right: 18%;
+			width: 100px;
+			margin-top: 40px;
 		}
 	}
 	.donaciones,
