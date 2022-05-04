@@ -9,7 +9,7 @@
 	color: $ppal_fc;
 	border-radius: 50px;
 	border: none;
-	padding: 1%;
+	padding: 1% 2%;
 	width: 200px;
 }
 .btn {
@@ -41,8 +41,11 @@
 	height: 36px !important;
 }
 @media (min-width: 600px) {
+	.round_btn {
+		width: 40px;
+	}
 	.round_btn:hover {
-		width: 43px !important;
+		width: 36px !important;
 		height: 36px !important;
 	}
 }

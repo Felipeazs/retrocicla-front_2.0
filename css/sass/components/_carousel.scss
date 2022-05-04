@@ -1,0 +1,60 @@
+.carousel {
+	background-color: transparent;
+	height: auto;
+	.carousel-indicators {
+		button {
+			background-color: $ppal_fc;
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			border: 2px solid;
+			border-color: #ffff;
+		}
+		.active {
+			background-color: $ppal_bc;
+			width: 20px;
+			height: 20px;
+			border: none;
+		}
+	}
+	.carousel-item {
+		position: relative;
+		height: 70%;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		.texto {
+			position: absolute;
+			top: 30%;
+			left: 10%;
+			p {
+				-webkit-text-fill-color: $ppal_fc;
+				-webkit-text-stroke-color: #ffff;
+				-webkit-text-stroke-width: 2px;
+				text-shadow: 2px 2px 2px black;
+				font-size: 95px;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+.slides {
+	background-color: $scd_bc;
+	padding: 10% 3%;
+	text-align: center;
+	p {
+		@extend .org;
+		padding: 2%;
+	}
+	.item span {
+		font-family: $scd_font_b;
+		text-align: start;
+	}
+}
+@media (min-width: 800px) {
+	.slides {
+		padding: 3% 3%;
+	}
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--Bootstrap iconos-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+		<!--FontAwesome-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!--Flickity gallery-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+		<!--JQuery-->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+			integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!--Assets-->
+		<script src="js/scripts.js"></script>
+		<link rel="stylesheet" href="css/flickity.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Catálogo</title>
+	</head>
+	<body>
+		<!-- Header -->
+
+		<header>
+			<div class="email">
+				<div><i class="bi bi-envelope"></i></div>
+				<p>retrocicla@gmail.com</p>
+			</div>
+			<div class="upcycling">
+				<p>Revoluciona la Industria de la Moda</p>
+			</div>
+			<div class="icons">
+				<i class="bi bi-whatsapp pe-3"></i>
+				<i class="bi bi-instagram pe-3"></i>
+				<i class="bi bi-facebook"></i>
+			</div>
+		</header>
+
+		<!--Navigation-->
+
+		<nav>
+			<img src="img/logo-menu.png" alt="logo" />
+
+			<!--Menú-->
+
+			<div class="navigation">
+				<div class="menu">
+					<div class="barras">
+						<button id="btn_barras"><i class="fa-solid fa-bars"></i></button>
+					</div>
+					<div class="contenido" id="contenido">
+						<ul>
+							<li class="nav-item">
+								<a class="nav-link" href="/">INICIO</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/somos">SOMOS</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/tienda">TIENDA</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/donaciones">DONACIONES</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/blog">BLOG</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!--Usuario y Carrito-->
+
+			<div class="carrito">
+				<div class="bag">
+					<a href="/carrito"><i class="bi bi-bag"></i></a>
+					<div class="span text-center"></div>
+				</div>
+				<div class="person">
+					<a href="/login"><i class="bi bi-person-circle"></i></a>
+				</div>
+				<div class="logout">
+					<c:if test="${ not empty cliente }">
+						<a href="/logout">
+							<div class="salir">
+								<span>Salir</span>
+							</div>
+						</a>
+					</c:if>
+				</div>
+			</div>
+		</nav>
+
+		<!--Políticas-->
+
+		<main>
+			<section class="politicas">
+				<div class="links">
+					<h3>Políticas Retrocicla</h3>
+					<dl>
+						<hr />
+						<dd>
+							<i class="fa-solid fa-chevron-right"></i
+							><a href="/politicas-privacidad" class="fs-6">Políticas de privacidad</a>
+						</dd>
+						<hr />
+						<dd>
+							<i class="fa-solid fa-chevron-right"></i
+							><a href="/politicas-contacto" class="fs-6">Políticas de contacto</a>
+						</dd>
+						<hr />
+						<dd>
+							<i class="fa-solid fa-chevron-right active"></i
+							><a href="/politicas-pago" class="fs-6">Políticas medios de pago</a>
+						</dd>
+						<hr />
+						<dd>
+							<i class="fa-solid fa-chevron-right"></i
+							><a href="/politicas-despacho" class="fs-6">Políticas de despacho</a>
+						</dd>
+						<hr />
+					</dl>
+				</div>
+				<div class="contenido">
+					<h3 class="fw-bold">Políticas de Medios de Pago</h3>
+					<h5>I. De los medios de pago en general.</h5>
+					<p class="mb-3">
+						Como contrapartida de la prestación de servicios que ofrece RetroCicla, el usuario podrá cumplir
+						su obligación efectuando el pago adeudado por cualquiera de los siguientes medios habilitados en
+						la plataforma:
+					</p>
+					<ul>
+						<li><p>Sistema de pago por Redcompra.</p></li>
+						<li><p>Asociación de Tarjetas de Crédito.</p></li>
+						<li><p>Transferencia Bancaria a cuenta habilitada</p></li>
+						<li>
+							<p>Pago por link habilitado o código QR especialmente designado.</p>
+						</li>
+					</ul>
+					<p class="mb-3">
+						RetroCicla les asegura que tanto el pago efectuado como los datos del usuario estarán protegidos
+						mediante el uso de certificados SSL, asunto que fuera tratado en el punto V. de la Política de
+						privacidad.
+					</p>
+					<h5>A. Caso especial de los contratos de tracto sucesivo.</h5>
+					<p class="mb-3">
+						En el caso de los contratos que celebre la RetroCicla con una empresa o persona natural,
+						mediante los cuales se pacten el uso de servicios periódicos, reiterativos, mes a mes o
+						cualquiera otra acepción que indique que las obligaciones se generarán en diversas oportunidades
+						tanto para la empresa como para el usuario, tales como las suscripciones especiales,
+						aprovisionamientos mensuales u otros servicios que se deban repetir posteriormente, el usuario
+						deberá optar por asociar la tarjeta de crédito que vaya a soportar el pago los días en que este
+						se devengue.
+					</p>
+					<h5>B. Caso general de los contratos de ejecución instantánea.</h5>
+					<p class="mb-3">
+						En el caso de los contratos que sean celebrados de forma única, que devenguen sus efectos para
+						una situación determinada, o bien que se desprenda del tenor de aquellos que sus efectos no
+						serán reiterados en el tiempo, como lo es la compraventa de A kg de fibra o de X material, podrá
+						el usuario hacer uso del pago vía tarjeta asociada al sistema de Redcompra, transferencia
+						bancaria a la cuenta asociada a RetroCicla, e inclusive cumplir su obligación pagando mediante
+						link de pago o código QR que contenga el valor del servicio contratado, siendo estos últimos
+						proveídos por la empresa que ofrece sus servicios.
+					</p>
+					<h5>II. De la facultad de retracto.</h5>
+					<p class="mb-3">
+						El usuario podrá dejar sin efecto el contrato celebrado con RetroCicla de forma unilateral
+						siempre y cuando manifieste en tiempo y forma dicha intención.
+					</p>
+					<ul>
+						<li>
+							<p>
+								Para estos efectos, el usuario deberá haber pagado el último servicio ofrecido por la
+								empresa en los contratos de ejecución instantánea y posteriormente redactar y enviar con
+								importancia alta un correo electrónico a la casilla de RetroCicla expresando su
+								intención de no persistir en el contrato y las causas que motivaron dicha decisión; no
+								deberá pagar ningún monto, sin embargo, en el evento que el servicio esté pendiente a su
+								ejecución, debiendo en este último caso contactarse el usuario por la vía más expedita
+								con la empresa a fin que aquella no persista con el servicio.
+							</p>
+						</li>
+						<li>
+							<p>
+								En el caso de los contratos de tracto sucesivo, será menester que en caso que no haya
+								usado los servicios que como empresa ofrecemos, el usuario redacte y envíe el correo
+								mencionado anteriormente con a lo máximo con a lo máximo una semana hábil antes de que
+								se devengue el próximo pago; de haber continuado usando estos servicios, el usuario
+								deberá pagar su cuota mensual respectiva antes de solicitar el cese de los servicios y
+								consecuentemente el pago de aquellos.
+							</p>
+						</li>
+						<li>
+							<p>
+								No se entenderá que el usuario manifiesta su intención de desafiliación, no obstante
+								haya enviado el citado correo, cuando ejecute actos que desprendan la intención de
+								persistir en la prestación de servicios, tales como celebrar un acto de compraventa
+								respecto a X cantidad de materiales, o bien A kg de determinada fibra, por mencionar
+								algunos ejemplos.
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+
+		<footer>
+			<div class="img-horario-contacto">
+				<div>
+					<img src="img/logo-footer.png" alt="" />
+				</div>
+				<div>
+					<p>HORARIOS</p>
+					<p>Lunes a Viernes de 10 a 18 hrs</p>
+				</div>
+
+				<div class="contacto">
+					<p>CONTÁCTANOS</p>
+					<div class="iconos">
+						<i class="bi bi-envelope ps-3 pe-3"></i>
+						<i class="bi bi-whatsapp pe-3"></i>
+						<i class="bi bi-instagram pe-3"></i>
+						<i class="bi bi-facebook pe-3"></i>
+					</div>
+				</div>
+			</div>
+
+			<hr />
+
+			<!-- Términos y condiciones -->
+
+			<div class="terminos-y-condiciones">
+				<div>
+					<p>Copyright retrocicla.cl</p>
+				</div>
+				<div>
+					<a href="/registrar-productos">Registrar productos</a> | <a href="">Términos y condiciones</a> |
+					<a href="">Política de reembolso</a> |
+					<a href="/politicas-privacidad">Política de privacidad</a>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/bootstrap.js"></script>
+	</body>
+</html>

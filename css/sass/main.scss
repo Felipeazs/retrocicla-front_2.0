@@ -1,6 +1,7 @@
 @import 'vendors/bootstrap/scss/bootstrap.scss';
-@import 'layout/header', 'layout/navigation', 'layout/main', 'layout/catalogo', 'layout/newsletter', 'layout/support',
-	'layout/footer';
+@import 'layout/header', 'layout/navigation', 'layout/main', 'layout/catalogo', 'layout/newsletter',
+	'layout/agente-cambio', 'layout/support', 'layout/footer', 'layout/redirect';
+@import 'components/carousel';
 @import 'base/typography';
 @import 'abstracts/variables';
 
@@ -15,6 +16,9 @@ body {
 a {
 	text-decoration: none;
 	color: #fff !important;
+}
+svg {
+	fill: #00ff99;
 }
 
 i {

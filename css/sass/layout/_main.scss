@@ -1,22 +1,43 @@
 @import '../abstracts/variables';
-@import '../components/buttons', '../components/inputs';
+@import '../components/buttons', '../components/inputs', '../components/buscador';
 @import '../base/typography';
 @import '../base/functions';
 
-main {
-	.carousel {
-		display: none;
+.texto {
+	text-align: center;
+	p {
 		background-color: $ppal_fc;
+		color: #ffff;
+		font-family: 'Metropolis';
+		font-size: 20px;
+		padding: 5% 2%;
 	}
+	span {
+		color: #00ff99;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $scd_font_b;
+}
+
+main {
 	.somos {
 		color: $ppal_fc;
 		font-family: $ppal_font;
+		background-color: $scd_bc;
 		font-size: 18px;
 		padding: 5% 5%;
-		height: 300px;
+		height: 200px;
 		text-align: center;
 		span {
 			font-weight: bolder;
+			color: $ppal_bc;
 		}
 		button {
 			margin-top: 10%;
@@ -47,26 +68,56 @@ main {
 		}
 	}
 	.somos-txt {
-		text-align: center;
-		p {
-			background-color: $ppal_fc;
-			color: #ffff;
-			font-family: 'Metropolis';
-			font-size: 20px;
-			padding: 5% 2%;
-		}
-		span {
-			color: #00ff99;
-		}
+		@extend .texto;
 		.pines {
-			display: flex;
+			display: inline-block;
 			flex-direction: column;
+			align-items: center;
 			background-color: #ffff;
 			padding: 3% 1%;
-			width: 100%;
-			margin: auto;
 			img {
 				width: 40%;
+			}
+		}
+	}
+	.somos-txt-2 {
+		@extend .texto;
+		p {
+			background-color: $thr_bc;
+		}
+	}
+	.requisitos {
+		text-align: center;
+		p {
+			@extend .org;
+			padding: 3%;
+		}
+		.pines {
+			display: inline-block;
+			padding: 3% 1%;
+			img {
+				width: 40%;
+				padding: 2%;
+			}
+		}
+	}
+	.imagen-central {
+		text-align: center;
+		img {
+			width: 90%;
+			border-radius: 20px;
+		}
+	}
+	.mapa {
+		text-align: center;
+		background-color: $scd_bc;
+		padding: 5%;
+		.direccion {
+			h1 {
+				color: $thr_bc;
+			}
+			h5 {
+				text-decoration: underline;
 			}
 		}
 	}
@@ -76,89 +127,408 @@ main {
 	.video {
 		@extend .seccion-mensaje;
 	}
-	.blog-noticias {
-		background-color: $scd_bc;
-		padding: 2.5% 3vw;
-		text-align: center;
+	.videos {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		p {
 			@extend .org;
+			margin: 3%;
 		}
-		.item span {
-			font-family: $scd_font_b;
-			text-align: start;
+		iframe {
+			border-radius: 10px;
+			width: 80vw;
+			height: 100%;
+		}
+		.video-1 {
+			margin-bottom: 5%;
+			background-color: $scd_bc;
+			height: 70vh;
+		}
+		.video-2 {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 80%;
+			padding: 5%;
+			height: 100vh;
+			background-image: url('/img/background-1.png');
+			background-size: cover;
+			iframe {
+				margin: 3%;
+			}
+		}
+	}
+
+	.mision-valores {
+		background-color: #ffff;
+		height: 100%;
+		padding: 10% 0;
+		img {
+			width: 30%;
+		}
+		.mision {
+			background-color: #ffff;
+			display: flex;
+			flex-direction: column;
+			padding: 5% 3%;
+			width: 80%;
+			margin: auto;
+			border: 5px dotted;
+			border-radius: 50px;
+			height: 100%;
+			.principal {
+				font-size: 1.2rem;
+				font-weight: bold;
+				border-bottom: 3px dotted;
+				padding: 20px;
+			}
+			p {
+				font-size: 1rem;
+				font-weight: bold;
+				border-bottom: 3px dotted;
+				margin: 0 0;
+			}
+		}
+
+		.img-1 {
+			position: absolute;
+			right: 22%;
+			margin-top: -13px;
+		}
+		.img-2 {
+			position: absolute;
+			left: 22%;
+			margin-top: -3%;
+		}
+		.img-3 {
+			position: absolute;
+			left: 60%;
+			margin-top: -12%;
+		}
+		.img-4 {
+			position: absolute;
+			right: 3%;
+			margin-top: 40px;
+			width: 50px;
+		}
+	}
+	.busqueda {
+		text-align: center;
+		width: 100%;
+		margin: auto;
+	}
+	.carrito {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 5%;
+		p {
+			@extend .org;
+			font-size: 1.5rem !important;
+			margin: 1%;
+		}
+		.carrito-tabla {
+			.tabla {
+				padding: 2%;
+				display: flex;
+				justify-content: center;
+			}
+			table {
+				border-bottom: 2px solid $ppal_fc;
+				thead {
+					border-bottom: 2px solid $ppal_fc;
+				}
+				tbody {
+					#descripcion {
+						width: 300px;
+						h6 {
+							display: inline;
+						}
+					}
+					#icono-eliminar {
+						display: inline;
+						text-align: end;
+						i {
+							font-size: 1.2rem;
+						}
+					}
+					#subtotal {
+						border-top: 2px dotted $ppal_fc;
+					}
+				}
+			}
+		}
+		.carrito-2 {
+			width: 95%;
+			margin: auto;
+			h1 {
+				@extend .org;
+			}
+			h6 {
+				color: $ppal_bc;
+			}
+		}
+		button {
+			margin: 5%;
+		}
+	}
+	.login-registro {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 80%;
+		margin: auto;
+		.login,
+		.registro {
+			margin: 7% 1%;
+			width: 50%;
+			p {
+				font-size: 0.8rem;
+				color: $ppal_fc;
+			}
+			.login-2 {
+				border: 2px dotted $ppal_fc;
+				border-radius: 20px;
+				padding: 3%;
+				.boton {
+					text-align: center !important;
+					margin: 5%;
+					button {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+	.info {
+		padding: 0 10%;
+		h6 {
+			font-family: $ppal_font_b;
+		}
+		.tracker {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			span {
+				padding: 0 10px;
+			}
+			.active {
+				color: $ppal_bc;
+			}
+		}
+		.forms {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			p {
+				@extend .org;
+				width: 100%;
+				font-size: 1.5rem !important;
+				padding: 2% 1%;
+				margin: 1% 0;
+				border-bottom: 1px dashed;
+			}
+			.cliente,
+			.direccion {
+				padding: 2% 0;
+				.link {
+					text-align: end;
+					a {
+						text-decoration: underline;
+						color: $ppal_fc !important;
+					}
+				}
+			}
+			.formulario {
+				label {
+					font-family: $scd_font_b;
+				}
+				select {
+					width: 90%;
+					padding: 2% 4%;
+					border-radius: 50px;
+					border: 2px solid;
+				}
+				input {
+					color: $ppal_fc;
+					width: 100%;
+					height: 40px;
+					padding: 0 0 0 2%;
+				}
+			}
+			.info-form {
+				.filas {
+					display: flex;
+					justify-content: space-between;
+					border: 2px solid $ppal_fc !important;
+					padding: 2%;
+					margin: 2% 0;
+					border-radius: 15px;
+					.radio {
+						display: flex;
+						align-items: baseline;
+						width: 100%;
+						input {
+							margin: 2%;
+						}
+					}
+				}
+				.pago {
+					border: 2px solid $ppal_fc !important;
+					padding: 2%;
+					margin: 2% 0;
+					border-radius: 15px;
+				}
+			}
+			.derecha {
+				.cupon {
+					display: flex;
+					align-items: baseline;
+					button {
+						width: 60px;
+						font-size: 1.2rem;
+					}
+				}
+				.detalle {
+					img {
+						margin: 3% 0%;
+						width: 100%;
+						border-radius: 25px;
+					}
+					.info-img {
+						margin: 5% 0;
+					}
+				}
+				.info-detalle {
+					display: flex;
+					flex-direction: row;
+					align-items: baseline;
+					justify-content: space-between;
+				}
+				.info-subtotal {
+					display: flex;
+					justify-content: space-between;
+				}
+			}
+			.botones {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin: 5% 0;
+				.link {
+					margin-left: 10%;
+					a {
+						color: $ppal_fc !important;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	.busqueda-avanzada {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #ffff;
+		height: 700px;
+		.drop-image {
+			display: flex;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			border: 2px dotted;
+			height: 90%;
+			width: 90%;
+		}
+	}
+	.noticias-img {
+		img {
+			width: 100%;
+		}
+	}
+	.noticias {
+		span {
+			color: $ppal_bc;
+		}
+		padding: 4% 7%;
+		.inserto {
+			display: flex;
+			flex-direction: column;
+			dd {
+				font-family: $scd_font_b;
+			}
+		}
+	}
+	.politicas {
+		padding: 2% 9%;
+		.links {
+			i {
+				padding: 0 2%;
+				font-size: 1rem;
+			}
+			.active {
+				color: #00ff99;
+			}
+			a {
+				color: $ppal_fc !important;
+			}
+		}
+	}
+	.registrar {
+		width: 50%;
+		margin: auto;
+		font-family: 'Metropolis';
+		.contenido {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			.formulario {
+				width: 100%;
+			}
+		}
+		.boton {
+			text-align: center;
 		}
 	}
 }
 
 @media (min-width: 600px) {
-	.carousel {
-		display: inline-block !important;
-		height: auto;
-		.carousel-indicators {
-			button {
-				background-color: $ppal_fc;
-				width: 16px;
-				height: 16px;
-				border-radius: 50%;
-				border: 2px solid;
-				border-color: #ffff;
-			}
-			.active {
-				background-color: $ppal_bc;
-				width: 20px;
-				height: 20px;
-				border: none;
-			}
-		}
-		.carousel-item {
-			position: relative;
-			height: 70%;
-			img {
-				height: 100%;
-			}
-			.texto {
-				position: absolute;
-				top: 30%;
-				left: 10%;
-				p {
-					-webkit-text-fill-color: $ppal_fc;
-					-webkit-text-stroke-color: #ffff;
-					-webkit-text-stroke-width: 2px;
-					text-shadow: 2px 2px 2px black;
-					font-size: 95px;
-					font-weight: 600;
-				}
-			}
-		}
-	}
 	.somos {
 		height: 200px !important;
 		padding: 3% 15% !important;
-		background-color: $ppal_fc;
+		background-color: $ppal_fc !important;
 		color: #ffff !important;
 		font-size: 22px;
-		span {
-			color: $ppal_bc;
-		}
 		button {
 			margin-top: 3% !important;
 		}
 	}
 	.somos-txt {
 		p {
-			padding: 8% 14% !important;
-			margin-bottom: -10% !important;
+			padding: 4% 14% 8% 14% !important;
+			margin-bottom: -10%;
 		}
 		.pines {
+			display: flex !important;
 			flex-direction: row !important;
-			position: relative;
+			justify-content: center;
+			position: relative !important;
 			background-color: transparent !important;
-			width: 80% !important;
-			margin-bottom: -17% !important;
 			img {
-				width: 100% !important;
-				height: 100%;
+				width: 15% !important;
 			}
+		}
+	}
+	.somos-txt-2 {
+		p {
+			padding: 4% 14% 8% 14% !important;
 		}
 	}
 	.somos-imgs {
@@ -171,63 +541,107 @@ main {
 			left: 10%;
 		}
 	}
-	.mision-valores {
-		background-color: #ffff;
-		height: 100%;
-		padding: 20% 0;
-		.mision {
-			background-color: #ffff;
-			display: flex;
-			flex-direction: column;
-			padding: 5% 3%;
-			width: 60%;
-			margin: auto;
-			border: 5px dotted;
-			border-radius: 50px;
-			height: 100%;
-			.principal {
-				font-size: 22px;
-				font-weight: bold;
-				border-bottom: 3px dotted;
-				padding: 20px;
-			}
-			p {
-				font-size: 22px;
-				font-weight: bold;
-				border-bottom: 3px dotted;
-				margin: 0 0;
+	.requisitos {
+		.pines {
+			img {
+				width: 15% !important;
 			}
 		}
-
+	}
+	.mapa {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		.direccion {
+			text-align: end;
+			width: 50%;
+		}
+		.imagen-central {
+			width: 50%;
+		}
+	}
+	.mision-valores {
+		padding: 5% 10% !important;
+		.mision {
+			padding: 3% 3% 6% 3% !important;
+		}
 		.img-1 {
-			position: absolute;
-			right: 22%;
+			right: 22% !important;
 			width: 200px;
 			margin-top: -20px;
 		}
 		.img-2 {
-			position: absolute;
 			left: 22%;
 			width: 200px;
 			margin-top: -3%;
 		}
 		.img-3 {
-			position: absolute;
-			left: 16%;
+			left: 14% !important;
 			width: 100px;
-			margin-top: -4%;
+			margin-top: -4% !important;
 		}
 		.img-4 {
-			position: absolute;
-			right: 18%;
-			width: 100px;
+			right: 13% !important;
+			width: 50px !important;
 			margin-top: 40px;
 		}
 	}
-	.donaciones,
-	.video {
+	.forms {
 		flex-direction: row !important;
-		justify-content: space-around !important;
-		padding: 6% 10% !important;
+		align-items: flex-start !important;
+		justify-content: space-around;
+		.info-form {
+			width: 60%;
+			.formulario {
+				display: flex;
+				flex-direction: row !important;
+				justify-content: space-between !important;
+				.input-2 {
+					width: 100%;
+					input {
+						width: 98%;
+						margin: auto;
+					}
+				}
+			}
+		}
+		.derecha {
+			width: 30%;
+		}
+	}
+	.inserto {
+		flex-direction: row !important;
+		.parr {
+			margin: 1% 1%;
+		}
+	}
+	.politicas {
+		display: flex;
+		flex-direction: row;
+		.links {
+			border-right: 2px dotted;
+			border-color: #2f355b;
+			padding: 1% 2%;
+		}
+		.contenido {
+			width: 75%;
+			padding: 1% 2%;
+		}
+	}
+}
+@media (min-width: 1000px) {
+	main {
+		.videos {
+			.video-2 {
+				flex-direction: row;
+				width: 90%;
+				height: 40vh;
+			}
+		}
+		.login-registro {
+			flex-direction: row !important;
+			align-items: flex-start;
+		}
 	}
 }

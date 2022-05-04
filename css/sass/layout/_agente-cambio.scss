@@ -1,0 +1,34 @@
+@import '../abstracts/variables';
+
+.agente-de-cambio {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: $thr_bc;
+	color: #fff;
+	padding: 5%;
+	h2 {
+		font-family: $scd_font_b;
+		font-size: 2rem;
+	}
+	span {
+		color: $ppal_bc;
+	}
+	.imagenes {
+		img {
+			display: inline-block;
+			margin: 2%;
+			width: 40%;
+		}
+	}
+}
+
+@media (min-width: 600px) {
+	.agente-de-cambio {
+		img {
+			width: 20% !important;
+		}
+	}
+}

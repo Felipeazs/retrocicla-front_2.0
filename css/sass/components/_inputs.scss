@@ -3,9 +3,10 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 1%;
 	input {
 		border-radius: 50px;
-		width: 300px;
+		width: 320px;
 		background-color: $thr_bc;
 		border: 2px solid;
 		border-color: #ffff;
@@ -14,13 +15,64 @@
 	}
 	input::placeholder {
 		color: #ffff;
-		font-size: 12px;
-		padding-left: 10px;
+		font-size: 15px;
+		padding-left: 1%;
+	}
+}
+.input-2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: flex-start;
+	padding: 1%;
+	input {
+		border-radius: 15px;
+		width: 90%;
+		border: 2px solid $ppal_fc;
+		color: #ffff;
+		padding: 2% 4%;
+	}
+}
+.textarea {
+	padding: 1%;
+	textarea {
+		border-radius: 20px;
+		width: 320px;
+		background-color: $thr_bc;
+		border: 2px solid;
+		border-color: #ffff;
+		color: #ffff;
+		padding: 10px;
+	}
+	textarea::placeholder {
+		color: #ffff;
+		font-size: 15px;
+	}
+}
+.textarea-2 {
+	textarea {
+		width: 90%;
+		height: 200px;
+		font-family: 'Metropolis';
+		border-radius: 20px;
+		border: 2px solid $ppal_fc;
+		padding: 2%;
+		color: $ppal_fc;
+		background-color: #ffff;
 	}
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
 	.input {
+		display: flex;
 		flex-direction: row;
+		input {
+			width: 340px;
+		}
+	}
+	.textarea-2 {
+		textarea {
+			width: 60%;
+		}
 	}
 }

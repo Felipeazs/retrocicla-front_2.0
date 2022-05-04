@@ -3,64 +3,97 @@
 
 nav {
 	display: flex;
-	flex-direction: column-reverse;
-	align-items: stretch;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
 	background-color: $ppal_fc;
 	img {
-		display: none;
+		display: inline-block !important;
+		width: 200px;
+		height: 90px;
+		object-fit: cover;
 	}
-	.navigator {
-		ul {
+	.navigation {
+		.menu {
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
 			align-items: center;
-			padding: 0;
-			margin: 0 7%;
-			list-style-type: none;
-			text-align: center;
-		}
-		li:hover {
-			border: solid 3px;
-			border-color: $ppal_bc;
-			border-radius: 50px;
-		}
-		.active {
-			border: solid 3px;
-			border-color: $ppal_bc;
-			border-radius: 50px;
-		}
-		.active:hover {
-			border: none;
+			.barras {
+				margin: 5% 1%;
+				button {
+					background-color: transparent;
+					border: none;
+					cursor: pointer;
+					i {
+						width: 24px;
+						height: 24px;
+						color: #fff;
+					}
+					i:hover {
+						color: $ppal_bc;
+					}
+				}
+			}
+			.contenido {
+				display: none;
+				ul {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					padding: 0;
+					margin: 0 7%;
+					list-style-type: none;
+					text-align: center;
+					width: 210px;
+				}
+				li:hover {
+					border: solid 3px;
+					border-color: $ppal_bc;
+					border-radius: 50px;
+				}
+				.active {
+					border: solid 3px;
+					border-color: $ppal_bc;
+					border-radius: 50px;
+				}
+				.active:hover {
+					border: none;
+				}
+			}
 		}
 	}
 	.carrito {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		justify-content: space-between;
-		position: relative;
-		left: 37%;
+		justify-content: space-around;
 		height: 50px;
 		width: 150px;
+		a .active {
+			color: $ppal_bc;
+		}
 	}
 }
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
 	nav {
 		flex-direction: row;
 		justify-content: space-around;
-		align-items: baseline;
-		img {
-			display: inline-block !important;
-			width: 280px;
-			height: 90px;
-			object-fit: cover;
-		}
-		.navigator {
+		align-items: center;
+		.navigation {
 			display: flex;
 			flex-direction: row;
-			ul {
-				flex-direction: row !important;
-				justify-content: center;
+			.menu {
+				.barras {
+					display: none;
+				}
+				.contenido {
+					display: inline-block !important;
+					ul {
+						flex-direction: row !important;
+						justify-content: center;
+					}
+				}
 			}
 		}
 		.carrito {
